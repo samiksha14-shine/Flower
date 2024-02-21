@@ -15,15 +15,16 @@ function App() {
   const [selectedItem, setSelectedItem] = useState(null);
 
   const addToCart = (picture) => {
-    setCart([picture]);
-    setMainPictures(mainPictures.filter((p) => p.id !== picture.id));
-    setSelectedItem(picture.id);
+    console.log('Adding to cart:', picture);
+    setCart([...cart, picture]); // Append the new item to the existing cart
+    setMainPictures(mainPictures.filter((p) => p.id !== picture.id)); // Remove the selected item from the main pictures
+    setSelectedItem(picture.id); // Set the selected item
   };
-
+  
   const isButtonDisabled = (picture) => {
-    return selectedItem && selectedItem !== picture.id;
+    return cart.some(item => item.id !== picture.id);
   };
-
+  
   const getTotalAmount = () => {
     return cart.reduce((total, picture) => total + picture.price, 0);
   };
