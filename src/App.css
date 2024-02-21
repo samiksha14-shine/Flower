@@ -1,38 +1,84 @@
-.App {
+/* App.css */
+
+/* Set background color */
+body {
+  background-color: mistyrose;
+}
+
+/* Main title styles */
+.main-title {
   text-align: center;
+  color: palevioletred; /* Change the color to palevioletred */
+  margin-bottom: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Cart icon styles */
+.cart-icon {
+  text-align: left; /* Align the cart icon to the left */
+  cursor: pointer;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Cart counter styles */
+.cart-counter {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: red;
   color: white;
+  border-radius: 50%;
+  padding: 5px 8px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Shopping cart styles */
+.shopping-cart {
+  margin-top: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Cart item styles */
+.cart-item {
+  margin-bottom: 20px;
+}
+
+/* Cart image styles */
+.cart-image {
+  width: 200px; /* Set the width */
+  height: 200px; /* Set the height */
+  object-fit: cover; /* Maintain aspect ratio while covering the box */
+  border: 2px solid palevioletred; /* Add border in palevioletred color */
+}
+
+/* Checkout button styles */
+.checkout-btn {
+  margin-top: 20px;
+}
+
+/* Back button styles */
+.back-btn {
+  margin-top: 10px;
+}
+
+/* Main item styles */
+.main-item {
+  margin-bottom: 30px;
+}
+
+/* Main image styles */
+.main-image {
+  width: 200px; /* Set the width */
+  height: 200px; /* Set the height */
+  object-fit: cover; /* Maintain aspect ratio while covering the box */
+  border: 2px solid palevioletred; /* Add border in palevioletred color */
+}
+
+/* Buy button styles */
+.buy-btn {
+  width: 100%;
+}
+
+/* Updated styles for displaying images side by side */
+.card {
+  display: inline-block;
+  width: 200px; /* Set the width */
+  margin-right: 10px; /* Add margin between images */
 }
